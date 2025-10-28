@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "tasks": {
+    "start": {
+      "description": "Start all Docker services",
+      "command": "docker-compose up -d"
+    },
+    "stop": {
+      "description": "Stop all Docker services",
+      "command": "docker-compose down"
+    },
+    "restart": {
+      "description": "Restart all Docker services",
+      "command": "docker-compose restart"
+    },
+    "logs": {
+      "description": "View logs from all services",
+      "command": "docker-compose logs -f"
+    },
+    "build": {
+      "description": "Build Docker images",
+      "command": "docker-compose build"
+    },
+    "test": {
+      "description": "Run all tests",
+      "command": "docker-compose exec backend pytest && docker-compose exec frontend npm test"
+    },
+    "lint": {
+      "description": "Run linters via Trunk",
+      "command": "trunk check"
+    },
+    "migrate": {
+      "description": "Run database migrations",
+      "command": "docker-compose exec backend alembic upgrade head"
+    },
+    "migration": {
+      "description": "Create a new migration",
+      "command": "docker-compose exec backend alembic revision --autogenerate -m"
+    },
+    "shell": {
+      "description": "Open shell in backend container",
+      "command": "docker-compose exec backend bash"
+    },
+    "frontend-shell": {
+      "description": "Open shell in frontend container",
+      "command": "docker-compose exec frontend sh"
+    }
+  }
+}
+

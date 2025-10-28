@@ -1,0 +1,45 @@
+version: 0.1
+cli:
+  version: 1.17.1
+lint:
+  enabled:
+    # Python
+    - black@latest
+    - ruff@latest
+    - mypy@latest
+    # TypeScript/JavaScript
+    - eslint@latest
+    - prettier@latest
+  ignore:
+    - alembic/versions/
+    - node_modules/
+    - venv/
+    - .venv/
+    - __pycache__/
+hooks:
+  local:
+    pre-commit:
+      - black
+      - ruff check --fix
+      - prettier --write
+checks:
+  black:
+    enabled: true
+    level: warn
+  ruff:
+    enabled: true
+    level: warn
+    args:
+      - --fix
+  mypy:
+    enabled: true
+    level: warn
+  eslint:
+    enabled: true
+    level: warn
+  prettier:
+    enabled: true
+    level: warn
+    args:
+      - --write
+

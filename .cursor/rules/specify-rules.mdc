@@ -1,0 +1,30 @@
+# PersonalActivityLogger Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2025-10-27
+
+## Active Technologies
+
+- Python 3.11, Node.js 20.x (LTS) + FastAPI 0.104+, SQLAlchemy 2.0+, Alembic, React 18+, Vite 5+, Uvicorn, pytest, React Testing Library (001-setup-project-infrastructure)
+
+## Project Structure
+
+```text
+backend/
+frontend/
+tests/
+```
+
+## Commands
+
+cd src; pytest; ruff check .
+
+## Code Style
+
+Python 3.11, Node.js 20.x (LTS): Follow standard conventions
+
+## Recent Changes
+
+- 001-setup-project-infrastructure: Added Python 3.11, Node.js 20.x (LTS) + FastAPI 0.104+, SQLAlchemy 2.0+, Alembic, React 18+, Vite 5+, Uvicorn, pytest, React Testing Library
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->
