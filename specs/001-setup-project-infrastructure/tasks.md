@@ -151,7 +151,7 @@
 - [x] T058 [US6] Configure pre-commit hooks in trunk.yaml to run on git commit
 - [x] T059 [US6] Add auto-fix rules to trunk.yaml for safe formatting fixes
 - [x] T060 [US6] Configure .gitignore to exclude .trunk/ and Trunk cache files
-- [ ] T061 [US6] Test Trunk by committing code with intentional formatting violation
+- [x] T061 [US6] Test Trunk by committing code with intentional formatting violation
 
 **Checkpoint**: Pre-commit hooks run, violations detected, auto-fix works, commit blocked on errors
 
@@ -173,7 +173,7 @@
 - [x] T067 [US7] Add "migrate" task to tasks.json to run alembic upgrade head
 - [x] T068 [US7] Add "build" task to tasks.json to build Docker images
 - [x] T069 [US7] Add "logs" task to tasks.json to run docker-compose logs -f
-- [ ] T070 [US7] Test all tasks.json commands execute successfully
+- [] T070 [US7] Test all tasks.json commands execute successfully
 
 **Checkpoint**: tasks.json provides 7+ common tasks that execute successfully
 
@@ -190,7 +190,7 @@
 - [x] T075 Update .gitignore with comprehensive patterns for Python, Node.js, Docker
 - [x] T076 [P] Create backend/tests/conftest.py with pytest fixtures for database
 - [x] T077 [P] Create frontend/tests/setup.ts with test utilities and mocks
-- [ ] T078 Run quickstart.md validation to ensure all steps work correctly
+- [x] T078 Run quickstart.md validation to ensure all steps work correctly
 
 ---
 
