@@ -1,0 +1,19 @@
+services:
+  backend:
+    volumes:
+      - ./backend/src:/app/src
+      - backend-alembic:/app/alembic
+      - backend-data:/app/data
+    environment:
+      - LOG_LEVEL=DEBUG
+
+  frontend:
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - /app/node_modules
+
+volumes:
+  backend-alembic:
+  backend-data:
+

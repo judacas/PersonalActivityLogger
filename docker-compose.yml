@@ -1,0 +1,43 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/src:/app/src
+      - backend-data:/app/data
+      - backend-alembic:/app/alembic
+    environment:
+      - DATABASE_URL=sqlite:///./data/app.db
+      - LOG_LEVEL=INFO
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+volumes:
+  backend-data:
+  backend-alembic:
+
+networks:
+  app-network:
+    driver: bridge
+
